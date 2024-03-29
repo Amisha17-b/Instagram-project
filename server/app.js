@@ -8,6 +8,8 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
+const PORT = process.env.PORT || 3000; // Use specified port or default to 3000
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/instagram_clone', {
     useNewUrlParser: true,
@@ -35,7 +37,6 @@ app.use(express.json());
 app.use('/posts', postRoutes);
 
 // Start server
-const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
