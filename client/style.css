@@ -1,0 +1,70 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for posts */
+#posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual post styling */
+.post {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Image styling */
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Description styling */
+.post p {
+    padding: 10px;
+}
+
+/* Button styling */
+.post button {
+    padding: 8px 15px;
+    background-color: #3897f0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.post button:hover {
+    background-color: #3578e5;
+}
+
+/* Like and comment count styling */
+.post span {
+    display: block;
+    padding: 0 10px;
+    color: #999;
+    font-size: 0.8em;
+}
+
+/* Comment list styling */
+.post ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post ul li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
+}
